@@ -1,32 +1,29 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
+import stylesheets from "@/styles/tailwind.css";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+export function links() {
+  return [{ rel: "stylesheet", href: stylesheets }];
+}
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" data-mode="system">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
+        />
+
         <Meta />
         <Links />
       </head>
-      <body>
-        <Outlet />
+      <body className="bg-background text-foreground">
+        <div className="contents">
+          <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );

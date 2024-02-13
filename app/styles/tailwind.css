@@ -1,0 +1,60 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+/* custom css */
+@layer base {
+  :root {
+    --color-border: 240 6% 90%;
+    --color-foreground: 0 0% 0%;
+    --color-background: 0 0% 100%;
+
+    --color-primary: 189 45% 37%;
+    --color-primary-foreground: 0 0% 100%;
+    --color-secondary: 22 100% 60%;
+    --color-info: 216 90% 48%;
+
+    --color-muted: 240 4.8% 95.9%;
+    --color-muted-foreground: 240 3.8% 46.1%;
+
+    --border-radius: 0.5rem;
+    --font-primary: "Urbanist", sans-serif;
+  }
+
+  .dark,
+  [data-mode="dark"] {
+    --color-foreground: 0 0% 95%;
+    --color-border: 240 3.7% 15.9%;
+    --color-background: 20 14.3% 4.1%;
+
+    --color-muted: 0 0% 15%;
+    --color-muted-foreground: 240 5% 64.9%;
+
+    color-scheme: dark !important;
+  }
+ 
+
+  html {
+    /* scrolling related settings */
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+
+    /* remove transparent layer on tap on mobiles */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    overscroll-behavior: contain;
+    font-family: var(--font-primary);
+  }
+
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+}
