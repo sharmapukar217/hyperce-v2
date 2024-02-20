@@ -65,6 +65,17 @@ export const HeroSection = ({
                   <ActionButtons />
                 </div>
               </div>
+
+              <div className="relative w-full mt-10">
+                <input
+                  type="text"
+                  className="bg-muted border h-14 rounded-full w-full text-sm font-semibold pl-4 pr-28 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Subscribe to our newsletter..."
+                />
+                <button className="absolute top-1.5 right-1.5 h-[80%] rounded-full text-sm font-semibold px-3 bg-primary text-primary-foreground hover:bg-primary/90">
+                  Subscribe
+                </button>
+              </div>
             </div>
             <div className="relative mt-20 md:mt-0 md:w-2/5 lg:w-3/5">
               <div className="-ml-6 md:-mr-72 lg:mr-0">

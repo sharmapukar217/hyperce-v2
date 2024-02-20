@@ -35,7 +35,6 @@
 
     color-scheme: dark !important;
   }
- 
 
   html {
     /* scrolling related settings */
@@ -56,5 +55,11 @@
   }
   details > summary::-webkit-details-marker {
     display: none;
+  }
+}
+
+@layer components {
+  .slider-active {
+    @apply !h-full !z-[100];
   }
 }

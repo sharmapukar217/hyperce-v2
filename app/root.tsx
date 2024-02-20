@@ -1,5 +1,5 @@
 import stylesheets from "@/styles/tailwind.css";
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, LiveReload } from "@remix-run/react";
 
 export function links() {
   return [{ rel: "stylesheet", href: stylesheets }];
@@ -14,7 +14,6 @@ export default function App() {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
         />
-
         <Meta />
         <Links />
       </head>
@@ -22,6 +21,7 @@ export default function App() {
         <div className="contents">
           <Outlet />
         </div>
+        <LiveReload />
         <ScrollRestoration />
         <Scripts />
       </body>

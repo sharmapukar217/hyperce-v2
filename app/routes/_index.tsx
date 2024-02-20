@@ -13,6 +13,8 @@ import { FAQSection } from "@/components/FAQSection";
 import { WhatsAppBtn } from "@/components/WhatsAppBtn";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { Footer } from "@/components/Footer";
+import { StepsToProcess } from "@/components/StepsToProcess";
+import { OurDesigns } from "@/components/OurDesigns";
 
 export const meta: MetaFunction = () => {
   return [{ title: "New Remix App" }, { question: "description", content: "Welcome to Remix!" }];
@@ -25,6 +27,8 @@ export default function Index() {
       <WhatsAppBtn whatsAppNumber="" />
 
       <HeroSection title={siteConfig.subtitle} summary={siteConfig.summary} />
+      <StepsToProcess />
+      <OurDesigns />
       <ClientsSection />
       <CTASection
         tag={() => <p className="text-primary uppercase font-semibold">WATCH A VIDEO </p>}
@@ -61,7 +65,7 @@ export default function Index() {
         description="Hyperce revolutionizes eCommerce with AI-driven solutions, elevating online businesses to new heights. Our dedication to innovation, efficiency, and tailored support ensures your success in the dynamic world of online retail."
       />
 
-      <ContactSection showGlobe={true} />
+      <ContactSection showGlobe={false} />
       <FAQSection
         faqs={[
           {

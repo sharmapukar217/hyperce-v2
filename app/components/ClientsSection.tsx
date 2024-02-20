@@ -32,7 +32,7 @@ export const ClientsSection = ({ title, clients = defaultClientsList }: ClientsS
             {clients.map((client) => (
               <div
                 key={client.id}
-                className="p-4 grayscale transition duration-200 hover:grayscale-0">
+                className="p-4 transition duration-200">
                 {typeof client.logo === "function" ? (
                   client.logo()
                 ) : (
